@@ -1,0 +1,20 @@
+# content
+# excerpt_link: Read More
+# fancybox: true
+
+# sidebar
+# sidebar: right
+# widgets:
+# - category
+# - tag
+# - tagcloud
+# - archive
+# - recent_posts
+
+# miscellaneous
+google_analytics:
+rss: # /atom.xml
+# twitter:
+# google_plus:
+# fb_admins:
+# fb_app_id:

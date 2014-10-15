@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <%
+  var title = page.title;
+  if (is_archive()){
+    title = 'Archive';
+    if (is_month()){
+      title += ' ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ' ' + page.year;
+    }
+  } else if (is_category()){
+    title = page.category;
+  } else if (is_tag()){
+    title = 'Tagged ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> — <% } %><%= config.title %></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= config.description %>">
+  <meta name="author" content="<%= config.author %>">
+  <% if (theme.rss){ %>
+  <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <%- css('css/all') %>
+  <%- partial('google-analytics') %>
+</head>
