@@ -9,7 +9,13 @@
     <%- post.content %>
   </section>
   <footer class="post-footer">
-    <li>footer, post.tags: <%= post.tags %></li>
+    <% if (post.tags && post.tags.length){ %>
+      <%- list_tags(post.tags, {
+        orderby: 'count',
+        show_count: false,
+        class: 'tag'
+      }) %>
+    <% } %>
   </footer>
 </article>
 <hr>
