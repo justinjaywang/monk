@@ -11,6 +11,7 @@
 @color--body:            @color-gray-darkest;
 @color--a:               inherit;
 @color--post-date:       @color-gray;
+@color--post-tag:       @color-gray;
 
 // typography
 // : font-size-variables
@@ -43,16 +44,17 @@
 @font-size--h1:   @font-size-em-mega;
 @font-size--h2:   @font-size-em-largest;
 @font-size--h3:   @font-size-em-larger;
-@font-size--h4:   @font-size-em-large;
-@font-size--h5:   @font-size-em-base;
-@font-size--h6:   @font-size-em-small;
+// @font-size--h4:   @font-size-em-large;
+// @font-size--h5:   @font-size-em-base;
+// @font-size--h6:   @font-size-em-small;
 @font-size--p:    @font-size-em-base;
-@font-size--code: @font-size-em-small;
+@font-size--code: @font-size-em-smaller;
 // : font-family-variables
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:      Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
 // : font-family-applications
+@font-family--body:         @font-family-sans-serif;
 @font-family--headings:     @font-family-sans-serif;
 @font-family--post-content: @font-family-serif;
 @font-family--post-caption: @font-family-sans-serif;
@@ -63,6 +65,8 @@
 @font-weight-semibold:  600;
 @font-weight-base:      400;
 @font-weight-semilight: 300;
+// : font-weight-applications
+@font-weight--headings: @font-weight-semibold;
 // : line-height-variables
 @line-height-tightest: 1.1;
 @line-height-tighter:  1.2;
@@ -71,7 +75,7 @@
 @line-height-loose:    1.5;
 @line-height-looser:   1.6;
 // : line-height-applications
-@line-height--headings: @line-height-tighter;
+@line-height--headings: @line-height-base;
 @line-height--body:     @line-height-base;
 // : letter-spacing-variables
 @letter-spacing-tighter: -0.04em;
@@ -79,6 +83,9 @@
 @letter-spacing-base:    0;
 @letter-spacing-loose:   0.02em;
 @letter-spacing-looser:  0.04em;
+// : letter-spacing-applications
+@letter-spacing--headings: @letter-spacing-base;
+@letter-spacing--body:     @letter-spacing-base;
 
 // responsiveness
 // : variables
@@ -102,5 +109,5 @@
 @z-index-10: 1000;
 
 // layout
-@width--container:     80%;
-@max-width--container: @width-screen-lg-min;
+@width--container:     640px;
+@width--figure:        @width-screen-lg-min;

@@ -2,7 +2,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+.negative-margin-center(@outer, @inner) {
+  margin-left: (@inner - @outer) / 2;
+  margin-right: (@inner - @outer) / 2;
+}
 
+// keep images from scaling beyond the width of their parents
+.img-responsive(@display: block) {
+  display: @display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
 
 // unused so far ------------------
 
@@ -29,14 +39,7 @@
 }
 
 
-// responsive image
-// keep images from scaling beyond the width of their parents
-.img-responsive(@display: block) {
-  display: @display;
-  // max-width: 100%; // Part 1: Set a maximum relative to the parent
-  width: 100%;
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
-}
+
 
 .opacity(@opacity) {
   opacity: @opacity;
