@@ -1,0 +1,15 @@
+<article class="post" data-post-id="<%= post._id %>">
+  <header class="post-header">
+    <a href="<%- url_for(post.path) %>">
+      <span><%= post.date %></span>
+      <h1><%= post.title %></h1>
+    </a>
+  </header>
+  <section class="post-container">
+    <%- post.content %>
+  </section>
+  <footer class="post-footer">
+    <li>footer, post.tags: <%= post.tags %></li>
+  </footer>
+</article>
+<hr>

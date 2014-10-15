@@ -1,1 +1,14 @@
-<h1>Hello world!</h1>
+<main class="container">
+<% page.posts.each(function(post){ %>
+  <%- partial('_partials/article', {post: post, index: true}) %>
+<% }) %>
+</main>
+<% if (page.total > 1){ %>
+  <h3>Pagination</h3>
+  <!-- <nav id="page-nav"> -->
+    <!--<%- paginator({
+      prev_text: '&laquo; Prev',
+      next_text: 'Next &raquo;'
+    }) %>-->
+  <!-- </nav> -->
+<% } %>

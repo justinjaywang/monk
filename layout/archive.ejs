@@ -1,2 +1,5 @@
-<h1>Hello archive!</h1>
-<!--<%- partial('_partial/archive', {pagination: config.archive, index: true}) %>-->
+<main class="container">
+<% page.posts.each(function(post){ %>
+  <%- partial('_partials/article-preview', {post: post, index: true}) %>
+<% }) %>
+</main>
