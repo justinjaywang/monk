@@ -1,7 +1,10 @@
 <header class="page-header">
   <nav class="nav nav--main">
     <ul class="nav-list">
-      <li class="nav-item"><a href="<%= config.root %>" class="nav-link"><%= __('title') %></a></li>
+      <li class="nav-item"><a href="<%= config.root %>" class="nav-link">
+        <!-- <img class="nav-gravatar" src="<%- gravatar('justinjaywang@gmail.com', 40) %>"> -->
+        <%= __('title') %>
+      </a></li>
       <li class="nav-item"><a href="<%= config.root + config.archive_dir %>" class="nav-link"><%= __('archive') %></a></li>
     </ul>
   </nav>
