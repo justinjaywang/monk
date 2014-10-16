@@ -7,7 +7,7 @@
 Clone the repository to the `themes/` directory of your Hexo project.
 
 ``` bash
-$ git clone https://github.com/justinjaywang/hexo-theme-air.git themes/monk
+$ git clone https://github.com/justinjaywang/monk.git themes/monk
 ```
 
 Configure `theme` to `monk` in your project's `_config.yml`.
@@ -21,6 +21,7 @@ cd themes/monk
 git pull
 ```
 
-## Configuration
+## Next steps
 
-To do!
+- Configuration, like RSS
+- Customizable parameters, like dark theme
