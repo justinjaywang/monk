@@ -93,6 +93,7 @@ hr {
 .nav {
   // background: @color-temp; // TEMP
   font-weight: @font-weight--nav;
+  // background: rgba(0,0,0,0.04); // TEMP
 }
 .nav-list {
   list-style: none;
@@ -106,7 +107,11 @@ hr {
   display: inline-block;
   padding: @container-gutter;
 }
+.nav--main {
+  border-bottom: 1px solid @color-gray-lighter;
+}
 .nav--pagination {
+  border-top: 1px solid @color-gray-lighter;
   text-align: center;
 }
 .nav--pagination .nav-item:first-child {
