@@ -4,13 +4,19 @@
 
 ### Install
 
+Install the Hexo Less renderer to compile the Less files.
+
+``` bash
+npm install hexo-renderer-less --save
+```
+
 Clone the repository to the `themes/` directory of your Hexo project.
 
 ``` bash
 $ git clone https://github.com/justinjaywang/monk.git themes/monk
 ```
 
-Configure `theme` to `monk` in your project's `_config.yml`.
+Configure `theme:` to `monk` in your Hexo project's `_config.yml`.
 
 ### Update
 
