@@ -12,7 +12,7 @@
   } else if (is_category()){
     title = page.category;
   } else if (is_tag()){
-    title = 'Tagged ' + page.tag;
+    title = 'Tagged: ' + page.tag;
   }
   %>
   <title><% if (title){ %><%= title %> — <% } %><%= config.title %></title>
