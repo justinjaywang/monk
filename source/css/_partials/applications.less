@@ -51,22 +51,25 @@ h5,
 h6 {
   font-family: @font-family--headings;
   font-weight: @font-weight--headings;
-  line-height: @line-height--headings;
   letter-spacing: @letter-spacing--headings;
 }
 h1 {
   font-size: @font-size--h1;
+  line-height: @line-height--h1;
 }
 h2 {
   font-size: @font-size--h2;
+  line-height: @line-height--h2;
 }
 h3 {
   font-size: @font-size--h3;
+  line-height: @line-height--h3;
 }
 h4,
 h5,
 h6 {
   font-size: inherit;
+  line-height: inherit;
 }
 p {
   font-size: @font-size--p;
@@ -87,28 +90,60 @@ samp {
 }
 
 // posts
+.post {
+  margin-top: @margin-top--post;
+  margin-bottom: @margin-bottom--post;
+}
 .post-content {
   font-family: @font-family--post-content;
+  word-wrap: break-word;
 }
-.post-content img {
-  .img-responsive();
+.post-content > p,
+.post-content > ol,
+.post-content > ul,
+.post-content > blockquote,
+.post-content > figure {
+  margin-bottom: @margin-bottom--post-content-text;
+}
+.post-title,
+.post-content > h1 {
+  margin-bottom: @margin-bottom--post-content-h1;
+}
+.post-content > h2 {
+  margin-bottom: @margin-bottom--post-content-h2;
+}
+.post-content > h3 {
+  margin-bottom: @margin-bottom--post-content-h3;
 }
 .post-content a {
   // text-decoration: underline;
-  box-shadow: inset 0 -1px @color-gray;
+  box-shadow: inset 0 -1px @color-gray; // TEMP
+}
+.post-content > ol,
+.post-content > ul {
+  padding-left: @padding-left--list;
 }
 .post-date {
   color: @color--post-date;
   font-size: @font-size--post-date;
+  font-family: @font-family--post-date;
 }
-.post-tag-list-item {
-  color: @color--post-tag-list-item;
-  font-size: @font-size--post-tag-list-item;
+.post-figure {
+  // margin-bottom: @margin-bottom--post-figure;
+}
+.post-figure img {
+  .img-responsive();
 }
 .post-figure-caption {
   color: @color--post-figure-caption;
   font-family: @font-family--post-figure-caption;
   font-size: @font-size--post-figure-caption;
+  line-height: @line-height--post-figure-caption;
+  margin-top: @margin-top--post-figure-caption;
+}
+.post-tag-list-item {
+  color: @color--post-tag-list-item;
+  font-size: @font-size--post-tag-list-item;
 }
 
 // responsiveness
@@ -118,8 +153,7 @@ samp {
     max-width: 100%;
   }
   .post-figure-caption {
-    padding-left: @container-gutter;
-    padding-right: @container-gutter;
+    text-align: center;
   }
 }
 // : small screens

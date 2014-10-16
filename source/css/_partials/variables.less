@@ -53,9 +53,6 @@
 @font-size--h1:   @font-size-em-mega;
 @font-size--h2:   @font-size-em-largest;
 @font-size--h3:   @font-size-em-larger;
-// @font-size--h4:   @font-size-em-large;
-// @font-size--h5:   @font-size-em-base;
-// @font-size--h6:   @font-size-em-small;
 @font-size--p:    @font-size-em-base;
 @font-size--code: @font-size-em-smaller;
 @font-size--post-content: @font-size-em-base;
@@ -71,7 +68,7 @@
 @font-family--headings:            @font-family-sans-serif;
 @font-family--post-content:        @font-family-serif;
 @font-family--post-figure-caption: @font-family-sans-serif;
-// @font-family--post-date:           @font-family-sans-serif;
+@font-family--post-date:           @font-family-serif;
 @font-family--code:                @font-family-monospace;
 // : font-weight-variables
 @font-weight-bold:      700;
@@ -88,8 +85,13 @@
 @line-height-loose:    1.5;
 @line-height-looser:   1.6;
 // : line-height-applications
-@line-height--headings: @line-height-base;
-@line-height--body:     @line-height-loose;
+@line-height--body:                @line-height-base;
+@line-height--h1:                  @line-height-tighter;
+@line-height--h2:                  @line-height-tight;
+@line-height--h3:                  @line-height-tight;
+@line-height--post-date:           @line-height-tight;
+@line-height--post-figure-caption: @line-height-tight;
+@line-height--post-tag-list-item:  @line-height-tight;
 // : letter-spacing-variables
 @letter-spacing-tighter: -0.04em;
 @letter-spacing-tight:   -0.02em;
@@ -121,3 +123,14 @@
 // responsiveness
 // : applications
 @width-screen--caption-padding-max: (@max-width--container--wide + 2 * @container-gutter);
+
+// spacing
+@margin-top--post:                     4em;
+@margin-bottom--post:                  4em;
+@margin-bottom--post-figure:           1.4em;
+@margin-bottom--post-content-text:     1.4em;
+@margin-bottom--post-content-h1:       0.5em;
+@margin-bottom--post-content-h2:       0.5em;
+@margin-bottom--post-content-h3:       0.25em;
+@padding-left--list:                   3em;
+@margin-top--post-figure-caption:      0.3333em;
