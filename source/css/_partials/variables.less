@@ -19,7 +19,7 @@
 @color--body:                @color-gray-darkest;
 @color--a:                   inherit;
 @color--post-date:           @color-gray;
-@color--post-tag-list-item:  @color-gray;
+@color--post-tag-list:       @color-gray;
 @color--post-figure-caption: @color-gray;
 
 // typography
@@ -48,17 +48,17 @@
 @font-size-em-smallest:  0.75em;
 @font-size-em-micro:     0.6667em;
 // : font-size-applications
-@font-size--html: @font-size-px-base;
-@font-size--body: @font-size-em-base;
-@font-size--h1:   @font-size-em-mega;
-@font-size--h2:   @font-size-em-largest;
-@font-size--h3:   @font-size-em-larger;
-@font-size--p:    @font-size-em-base;
-@font-size--code: @font-size-em-smaller;
-@font-size--post-content: @font-size-em-base;
-@font-size--post-date: @font-size-em-small;
+@font-size--html:                @font-size-px-base;
+@font-size--body:                @font-size-em-base;
+@font-size--h1:                  @font-size-em-mega;
+@font-size--h2:                  @font-size-em-largest;
+@font-size--h3:                  @font-size-em-larger;
+@font-size--p:                   @font-size-em-base;
+@font-size--code:                @font-size-em-smaller;
+@font-size--post-content:        @font-size-em-base;
+@font-size--post-date:           @font-size-em-small;
 @font-size--post-figure-caption: @font-size-em-smaller;
-@font-size--post-tag-list-item: @font-size-em-small;
+@font-size--post-tag-list:       @font-size-em-small;
 // : font-family-variables
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:      Georgia, "Times New Roman", Times, serif;
@@ -69,6 +69,7 @@
 @font-family--post-content:        @font-family-serif;
 @font-family--post-figure-caption: @font-family-sans-serif;
 @font-family--post-date:           @font-family-serif;
+@font-family--post-tag-list:       @font-family-sans-serif;
 @font-family--code:                @font-family-monospace;
 // : font-weight-variables
 @font-weight-bold:      700;
@@ -125,12 +126,17 @@
 @width-screen--caption-padding-max: (@max-width--container--wide + 2 * @container-gutter);
 
 // spacing
-@margin-top--post:                     4em;
-@margin-bottom--post:                  4em;
+@margin-top--post:                     5em;
+@margin-bottom--post:                  5em;
 @margin-bottom--post-figure:           1.4em;
 @margin-bottom--post-content-text:     1.4em;
 @margin-bottom--post-content-h1:       0.5em;
 @margin-bottom--post-content-h2:       0.5em;
 @margin-bottom--post-content-h3:       0.25em;
+@margin-left--post-tag-list-item:      0.3333em;
 @padding-left--list:                   3em;
 @margin-top--post-figure-caption:      0.3333em;
+
+// content
+@content--post-tag-list-before:     'Tagged:';
+@content--post-tag-list-item-after: ',';
