@@ -1,14 +1,14 @@
 <article class="post" data-post-id="<%= post._id %>">
-  <header class="post-header">
+  <header class="post-header container container--narrow">
     <a href="<%- url_for(post.path) %>">
       <%- partial('date', {date_format: config.date_format}) %>
       <h1 class="post-title"><%= post.title %></h1>
     </a>
   </header>
-  <section class="post-content">
+  <section class="post-content container container--narrow">
     <%- post.content %>
   </section>
-  <footer class="post-footer">
+  <footer class="post-footer container container--narrow">
     <%- partial('tag') %>
   </footer>
 </article>

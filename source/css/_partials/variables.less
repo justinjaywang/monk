@@ -1,3 +1,11 @@
+// responsiveness
+// : variables
+@width-screen-sm-min: 480px;
+@width-screen-md-min: 680px;
+@width-screen-lg-min: 1024px;
+@width-screen-sm-max: (@width-screen-md-min - 1);
+@width-screen-md-max: (@width-screen-lg-min - 1);
+
 // colors
 // : variables
 @color-gray-darkest:  rgba(0,0,0,0.8);
@@ -7,15 +15,16 @@
 @color-gray-lightest: rgb(255,255,255);
 @color-temp:          rgba(86,61,124,.15);
 // : applications
-@background-color--body: @color-gray-lightest;
-@color--body:            @color-gray-darkest;
-@color--a:               inherit;
-@color--post-date:       @color-gray;
-@color--post-tag:       @color-gray;
+@background-color--body:     @color-gray-lightest;
+@color--body:                @color-gray-darkest;
+@color--a:                   inherit;
+@color--post-date:           @color-gray;
+@color--post-tag-list-item:  @color-gray;
+@color--post-figure-caption: @color-gray;
 
 // typography
 // : font-size-variables
-@font-size-px-base:      16px;
+@font-size-px-base:      17.5px;
 @font-size-rem-tera:     3rem;
 @font-size-rem-giga:     2rem;
 @font-size-rem-mega:     1.75rem;
@@ -49,17 +58,21 @@
 // @font-size--h6:   @font-size-em-small;
 @font-size--p:    @font-size-em-base;
 @font-size--code: @font-size-em-smaller;
+@font-size--post-content: @font-size-em-base;
+@font-size--post-date: @font-size-em-small;
+@font-size--post-figure-caption: @font-size-em-smaller;
+@font-size--post-tag-list-item: @font-size-em-small;
 // : font-family-variables
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:      Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
 // : font-family-applications
-@font-family--body:         @font-family-sans-serif;
-@font-family--headings:     @font-family-sans-serif;
-@font-family--post-content: @font-family-serif;
-@font-family--post-caption: @font-family-sans-serif;
-@font-family--post-date:    @font-family-sans-serif;
-@font-family--code:         @font-family-monospace;
+@font-family--body:                @font-family-sans-serif;
+@font-family--headings:            @font-family-sans-serif;
+@font-family--post-content:        @font-family-serif;
+@font-family--post-figure-caption: @font-family-sans-serif;
+// @font-family--post-date:           @font-family-sans-serif;
+@font-family--code:                @font-family-monospace;
 // : font-weight-variables
 @font-weight-bold:      700;
 @font-weight-semibold:  600;
@@ -76,7 +89,7 @@
 @line-height-looser:   1.6;
 // : line-height-applications
 @line-height--headings: @line-height-base;
-@line-height--body:     @line-height-base;
+@line-height--body:     @line-height-loose;
 // : letter-spacing-variables
 @letter-spacing-tighter: -0.04em;
 @letter-spacing-tight:   -0.02em;
@@ -86,14 +99,6 @@
 // : letter-spacing-applications
 @letter-spacing--headings: @letter-spacing-base;
 @letter-spacing--body:     @letter-spacing-base;
-
-// responsiveness
-// : variables
-@width-screen-sm-min: 480px;
-@width-screen-md-min: 680px;
-@width-screen-lg-min: 1024px;
-@width-screen-sm-max: (@width-screen-md-min - 1);
-@width-screen-md-max: (@width-screen-lg-min - 1);
 
 // z-index
 // : variables
@@ -109,5 +114,10 @@
 @z-index-10: 1000;
 
 // layout
-@width--container:     640px;
-@width--figure:        @width-screen-lg-min;
+@container-gutter:             20px;
+@max-width--container--narrow: @width-screen-md-min;
+@max-width--container--wide:   (@width-screen-lg-min - @container-gutter * 2);
+
+// responsiveness
+// : applications
+@width-screen--caption-padding-max: (@max-width--container--wide + 2 * @container-gutter);
