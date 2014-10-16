@@ -6,10 +6,10 @@
       <a href="<%- config.root %><%- page.prev_link %>" class="nav-link"><%= __('previous') %></a>
       <% } %>
     </li>
-    <li class="nav-item"><%= page.current %> of <%= page.total %></li>
+    <li class="nav-item nav-item--empty"><%= page.current %> of <%= page.total %></li>
     <li class="nav-item">
       <% if (page.next){ %>
-      <a href="<%- config.root %><%- page.next_link %>" class="nav-right"><%= __('next') %></a>
+      <a href="<%- config.root %><%- page.next_link %>" class="nav-link"><%= __('next') %></a>
       <% } %>
     </li>
   </ul>

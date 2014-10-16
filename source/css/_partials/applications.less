@@ -89,10 +89,32 @@ hr {
   border-top: @border-top--hr;
 }
 
-// lists
-.nav-list,
-.post-tag-list {
+// nav
+.nav {
+  // background: @color-temp; // TEMP
+}
+.nav-list {
   list-style: none;
+}
+.nav-item {
+  display: inline-block;
+  // background: @color-temp; // TEMP
+}
+.nav-link,
+.nav-item--empty {
+  display: inline-block;
+  padding: @container-gutter;
+}
+.nav--pagination {
+  text-align: center;
+}
+.nav--pagination .nav-item:first-child {
+  position: absolute;
+  left: 0;
+}
+.nav-item:last-child {
+  position: absolute;
+  right: 0;
 }
 
 // posts
@@ -164,6 +186,7 @@ hr {
   color: @color--post-tag-list;
 }
 .post-tag-list {
+  list-style: none;
   font-size: @font-size--post-tag-list;
   font-family: @font-family--post-tag-list;
 }
