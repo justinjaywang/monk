@@ -1,0 +1,67 @@
+.pre-subdued {
+  color: @color--pre-subdued;
+  font-weight: @font-weight--pre-subdued;
+
+}
+.pre-normal {
+  color: @color--pre-normal;
+  font-weight: @font-weight--pre-normal;
+
+}
+.pre-alt {
+  color: @color--pre-alt;
+  font-weight: @font-weight--pre-alt;
+}
+.pre-em {
+  color: @color--pre-em;
+  font-weight: @font-weight--pre-em;
+  font-style: @font-style--pre-em;
+}
+.pre-strong {
+  color: @color--pre-strong;
+  font-weight: @font-weight--pre-strong;
+}
+.highlight .gutter {
+  display: none;
+}
+.highlight .line {
+  min-height: (@font-size--code * @line-height--code);
+}
+pre {
+  .comment,
+  .doctype,
+  .link_url,
+  .rule .value .function {
+    &:extend(.pre-subdued);
+  }
+  .string,
+  .tag .value,
+  .params,
+  .regexp,
+  .number,
+  .literal,
+  .built_in,
+  .hexcolor,
+  .pseudo,
+  .link_label,
+  .bullet,
+  .link_reference,
+  .constant,
+  .subst,
+  .cdata,
+  .decorator {
+    &:extend(.pre-alt);
+  }
+  .emphasis {
+    &:extend(.pre-em);
+  }
+  .strong,
+  .tag .title,
+  .header,
+  .keyword,
+  .function,
+  .css .tag,
+  .title {
+    &:extend(.pre-strong);
+  }
+}

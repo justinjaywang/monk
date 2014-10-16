@@ -8,15 +8,15 @@
 
 // colors
 // : variables
-@color-gray-darkest:  rgba(0,0,0,0.8);
-@color-gray-darker:   rgba(0,0,0,0.6);
-@color-gray-dark:     rgba(0,0,0,0.6);
-@color-gray:          rgba(0,0,0,0.44);
-@color-gray-light:    rgba(0,0,0,0.3);
-@color-gray-lighter:  rgba(0,0,0,0.15);
-@color-gray-lightest: rgba(0,0,0,0.05);
-@color-white:         rgb(255,255,255);
-@color-temp:          rgba(86,61,124,.15);
+@color-gray-darkest:    rgba(0,0,0,0.8);
+@color-gray-darker:     rgba(0,0,0,0.6);
+@color-gray-dark:       rgba(0,0,0,0.6);
+@color-gray:            rgba(0,0,0,0.44);
+@color-gray-light:      rgba(0,0,0,0.3);
+@color-gray-lighter:    rgba(0,0,0,0.15);
+@color-gray-lightest:   rgba(0,0,0,0.04);
+@color-white:           rgb(255,255,255);
+@color-temp:            rgba(86,61,124,0.15);
 // : applications
 @background-color--body:     @color-white;
 @color--body:                @color-gray-darkest;
@@ -24,6 +24,12 @@
 @color--post-date:           @color-gray;
 @color--post-tag-list:       @color-gray;
 @color--post-figure-caption: @color-gray;
+@background-color--code:     @color-gray-lightest;
+@color--pre-subdued:         @color-gray-light;
+@color--pre-normal:          @color-gray-darkest;
+@color--pre-alt:             @color-gray-dark;
+@color--pre-em:              @color-gray-darkest;
+@color--pre-strong:          @color-gray-darkest;
 
 // typography
 // : font-size-variables
@@ -58,6 +64,7 @@
 @font-size--h3:                  @font-size-em-larger;
 @font-size--p:                   @font-size-em-base;
 @font-size--code:                @font-size-em-smaller;
+@font-size--blockquote:          @font-size-em-base;
 @font-size--post-content:        @font-size-em-base;
 @font-size--post-date:           @font-size-em-small;
 @font-size--post-figure-caption: @font-size-em-smaller;
@@ -65,23 +72,30 @@
 // : font-family-variables
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:      Georgia, "Times New Roman", Times, serif;
-@font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-monospace:  Consolas, Monaco, "Andale Mono", monospace;
 // : font-family-applications
 @font-family--body:                @font-family-sans-serif;
 @font-family--headings:            @font-family-sans-serif;
 @font-family--post-content:        @font-family-serif;
 @font-family--post-figure-caption: @font-family-sans-serif;
-@font-family--post-date:           @font-family-serif;
+@font-family--post-date:           @font-family-sans-serif;
 @font-family--post-tag-list:       @font-family-sans-serif;
 @font-family--code:                @font-family-monospace;
 // : font-weight-variables
 @font-weight-bold:      700;
 @font-weight-semibold:  600;
-@font-weight-base:      400;
+@font-weight-normal:    400;
 @font-weight-semilight: 300;
 // : font-weight-applications
-@font-weight--headings: @font-weight-semibold;
-@font-weight--nav:      @font-weight-semibold;
+@font-weight--headings:    @font-weight-semibold;
+@font-weight--nav:         @font-weight-semibold;
+@font-weight--pre-subdued: @font-weight-normal;
+@font-weight--pre-normal:  @font-weight-normal;
+@font-weight--pre-alt:     @font-weight-normal;
+@font-weight--pre-em:      @font-weight-normal;
+@font-weight--pre-strong:  @font-weight-bold;
+// : font-style applications
+@font-style--pre-em: italic;
 // : line-height-variables
 @line-height-tightest: 1.1;
 @line-height-tighter:  1.2;
@@ -97,6 +111,7 @@
 @line-height--post-date:           @line-height-tight;
 @line-height--post-figure-caption: @line-height-tight;
 @line-height--post-tag-list-item:  @line-height-tight;
+@line-height--code:                @line-height-base;
 // : letter-spacing-variables
 @letter-spacing-tighter: -0.04em;
 @letter-spacing-tight:   -0.02em;
@@ -147,14 +162,19 @@
 @margin-left--post-tag-list-item-first: 0;
 @padding-left--list:                    3em;
 @margin-top--post-figure-caption:       0.3333em;
+@padding-left--code:                    0.3333em;
+@padding-top--code:                     0.1667em;
+@padding-left--pre:                     1em;
+@padding-top--pre:                      1em;
 
 // miscellaneous
-@box-shadow--a:     inset 0 -1px @color-gray-light;
-@width--hr:         5em;
-@margin-top--hr:    2.5em;
-@margin-bottom--hr: 2.5em;
-@border-top--hr:    1px solid @color-gray-lighter;
+@box-shadow--a:          inset 0 -1px @color-gray-light;
+@width--hr:              5em;
+@margin-top--hr:         2.8em;
+@margin-bottom--hr:      2.8em;
+@border-top--hr:         1px solid @color-gray-lighter;
+@box-shadow--blockquote: inset 3px 0 @color-gray-light;
 
 // content
-@content--post-tag-list-before:     'Tagged—';
+@content--post-tag-list-before:     '';
 @content--post-tag-list-item-after: ',';

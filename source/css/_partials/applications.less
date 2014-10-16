@@ -80,13 +80,28 @@ pre,
 samp {
   font-family: @font-family--code;
   font-size: @font-size--code;
-  background: @color-temp; // TEMP
+  background-color: @background-color--code;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+code {
+  padding: @padding-top--code @padding-left--code;
+}
+pre {
+  padding: @padding-top--pre @padding-left--pre;
 }
 hr {
   width: @width--hr;
   margin: @margin-top--hr auto @margin-bottom--hr;
   border: 0;
   border-top: @border-top--hr;
+}
+.post-content a {
+  box-shadow: @box-shadow--a; // TEMP
+}
+blockquote {
+  box-shadow: @box-shadow--blockquote;
+  font-size: @font-size--blockquote;
 }
 
 // nav
@@ -108,10 +123,10 @@ hr {
   padding: @container-gutter;
 }
 .nav--main {
-  border-bottom: 1px solid @color-gray-lighter;
+  border-bottom: 1px solid @color-gray-lightest;
 }
 .nav--pagination {
-  border-top: 1px solid @color-gray-lighter;
+  border-top: 1px solid @color-gray-lightest;
   text-align: center;
 }
 .nav--pagination .nav-item:first-child {
@@ -163,9 +178,6 @@ hr {
 }
 .post-content > h3 {
   margin-bottom: @margin-bottom--post-content-h3;
-}
-.post-content a {
-  box-shadow: @box-shadow--a; // TEMP
 }
 .post-content > ol,
 .post-content > ul {
