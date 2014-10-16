@@ -9,9 +9,11 @@
 // colors
 // : variables
 @color-gray-darkest:  rgba(0,0,0,0.8);
+@color-gray-darker:   rgba(0,0,0,0.6);
 @color-gray-dark:     rgba(0,0,0,0.6);
 @color-gray:          rgba(0,0,0,0.44);
-@color-gray-light:    rgba(0,0,0,0.15);
+@color-gray-light:    rgba(0,0,0,0.3);
+@color-gray-lighter:  rgba(0,0,0,0.15);
 @color-gray-lightest: rgb(255,255,255);
 @color-temp:          rgba(86,61,124,.15);
 // : applications
@@ -126,17 +128,27 @@
 @width-screen--caption-padding-max: (@max-width--container--wide + 2 * @container-gutter);
 
 // spacing
-@margin-top--post:                     5em;
-@margin-bottom--post:                  5em;
-@margin-bottom--post-figure:           1.4em;
-@margin-bottom--post-content-text:     1.4em;
-@margin-bottom--post-content-h1:       0.5em;
-@margin-bottom--post-content-h2:       0.5em;
-@margin-bottom--post-content-h3:       0.25em;
-@margin-left--post-tag-list-item:      0.3333em;
-@padding-left--list:                   3em;
-@margin-top--post-figure-caption:      0.3333em;
+@margin-top--post:                      5em;
+@margin-bottom--post:                   5em;
+@margin-top--post-figure:               1.4em;
+@margin-bottom--post-figure:            1.4em;
+@margin-bottom--post-figure-group:      2.8em;
+@margin-bottom--post-content-text:      1.4em;
+@margin-bottom--post-content-h1:        0.5em;
+@margin-bottom--post-content-h2:        0.5em;
+@margin-bottom--post-content-h3:        0.25em;
+@margin-left--post-tag-list-item:       0.3333em;
+@margin-left--post-tag-list-item-first: 0;
+@padding-left--list:                    3em;
+@margin-top--post-figure-caption:       0.3333em;
+
+// miscellaneous
+@box-shadow--a:     inset 0 -1px @color-gray-light;
+@width--hr:         5em;
+@margin-top--hr:    2.5em;
+@margin-bottom--hr: 2.5em;
+@border-top--hr:    1px solid @color-gray-lighter;
 
 // content
-@content--post-tag-list-before:     'Tagged:';
+@content--post-tag-list-before:     'Tagged—';
 @content--post-tag-list-item-after: ',';

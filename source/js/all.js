@@ -1,14 +1,16 @@
 +function ($) {
   'use strict';
 
+  var narrowContainerClasses = 'container container--narrow';
+
   $('.post-content').each(function (i, postContent) {
     // (1) remove container classes from .post-content
     $(postContent).each(function () {
-      $(this).removeClass('container container--narrow');
+      $(this).removeClass(narrowContainerClasses);
     });
     // (2) add container--narrow to each of the children
     $(postContent).children().each(function () {
-      $(this).addClass('container container--narrow');
+      $(this).addClass(narrowContainerClasses);
     });
     // (3) wrap images in a figure and append figcaption
     $(postContent).find('img').each(function (j, image) {
@@ -23,6 +25,10 @@
       if (alt) {
         $figure.append('<figcaption class="post-figure-caption">' + alt + '</figcaption>');
       }
+    });
+    // (4) remove container classes from hr
+    $(postContent).find('hr').each(function () {
+      $(this).removeClass(narrowContainerClasses)
     });
   });
 
