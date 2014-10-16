@@ -92,6 +92,7 @@ hr {
 // nav
 .nav {
   // background: @color-temp; // TEMP
+  font-weight: @font-weight--nav;
 }
 .nav-list {
   list-style: none;
@@ -121,6 +122,21 @@ hr {
 .post {
   margin-top: @margin-top--post;
   margin-bottom: @margin-bottom--post;
+}
+.post--preview {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.post--preview:first-child {
+  margin-top: @margin-top--post--preview;
+}
+.post--preview:last-child {
+  margin-bottom: @margin-bottom--post--preview;
+}
+.post--preview .post-header-link {
+  display: block;
+  padding-top: @padding--post-header-link-top;
+  padding-bottom: @padding--post-header-link-bottom;
 }
 .post-content {
   font-family: @font-family--post-content;
