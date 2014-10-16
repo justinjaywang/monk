@@ -1,5 +1,6 @@
-<main class="container">
+<main class="page-main">
 <% page.posts.each(function(post){ %>
   <%- partial('_partials/article-preview', {post: post, index: true}) %>
 <% }) %>
 </main>
+<%- partial('_partials/footer') %>

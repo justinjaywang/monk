@@ -1,8 +1,8 @@
 <article class="post post--preview" data-post-id="<%= post._id %>">
   <header class="post-header container container--narrow">
     <a class="post-header-link" href="<%- url_for(post.path) %>">
-      <h3><%= post.title %></h3>
       <%- partial('date', {date_format: config.date_format}) %>
+      <h2><%= post.title %></h2>
     </a>
   </header>
 </article>

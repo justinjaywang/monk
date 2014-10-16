@@ -1,0 +1,19 @@
+<% if (page.total > 1){ %>
+<nav class="nav nav--pagination">
+  <ul class="nav-list">
+    <li class="nav-item">
+      <% if (page.prev){ %>
+      <a href="<%- config.root %><%- page.prev_link %>" class="nav-link"><%= __('Previous') %></a>
+      <% } %>
+    </li>
+    <li class="nav-item">
+      <a href="<%- config.root %><% if (page.prev) { %><%- page.prev_link %><% } else if (page.next) { %><%- page.next_link %><% } %>" class="nav-link nav-link--center"><%= page.current %> <%= __('of') %> <%= page.total %></a>
+    </li>
+    <li class="nav-item">
+      <% if (page.next){ %>
+      <a href="<%- config.root %><%- page.next_link %>" class="nav-link"><%= __('Next') %></a>
+      <% } %>
+    </li>
+  </ul>
+</nav>
+<% } %>

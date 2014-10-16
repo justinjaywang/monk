@@ -2,7 +2,7 @@
 // : variables
 @width-screen-sm-min: 480px;
 @width-screen-md-min: 680px;
-@width-screen-lg-min: 1024px;
+@width-screen-lg-min: 1104px;
 @width-screen-sm-max: (@width-screen-md-min - 1);
 @width-screen-md-max: (@width-screen-lg-min - 1);
 
@@ -12,24 +12,30 @@
 @color-gray-darker:     rgba(0,0,0,0.6);
 @color-gray-dark:       rgba(0,0,0,0.6);
 @color-gray:            rgba(0,0,0,0.44);
-@color-gray-light:      rgba(0,0,0,0.3);
+@color-gray-light:      rgba(0,0,0,0.28);
 @color-gray-lighter:    rgba(0,0,0,0.15);
 @color-gray-lightest:   rgba(0,0,0,0.04);
 @color-white:           rgb(255,255,255);
 @color-temp:            rgba(86,61,124,0.15);
 // : applications
-@background-color--body:     @color-white;
-@color--body:                @color-gray-darkest;
-@color--a:                   inherit;
-@color--post-date:           @color-gray;
-@color--post-tag-list:       @color-gray;
-@color--post-figure-caption: @color-gray;
-@background-color--code:     @color-gray-lightest;
-@color--pre-subdued:         @color-gray-light;
-@color--pre-normal:          @color-gray-darkest;
-@color--pre-alt:             @color-gray-dark;
-@color--pre-em:              @color-gray-darkest;
-@color--pre-strong:          @color-gray-darkest;
+@background-color--body:        @color-white;
+@color--body:                   @color-gray-darkest;
+@color--a:                      inherit;
+@color--nav:                    @color-gray;
+@color--nav-link:               @color-gray-light;
+@color--nav-link--center:       inherit;
+@color--post-date:              @color-gray;
+@color--post-tag-list:          @color-gray;
+@color--post-figure-caption:    @color-gray;
+@background-color--code:        @color-gray-lightest;
+@color--pre-subdued:            @color-gray-light;
+@color--pre-normal:             @color-gray-darkest;
+@color--pre-alt:                @color-gray-dark;
+@color--pre-em:                 @color-gray-darkest;
+@color--pre-strong:             @color-gray-darkest;
+@color--box-shadow--a:          @color-gray-light;
+@color--border-top--hr:         @color-gray-lighter;
+@color--box-shadow--blockquote: @color-gray-light;
 
 // typography
 // : font-size-variables
@@ -69,8 +75,9 @@
 @font-size--post-date:           @font-size-em-small;
 @font-size--post-figure-caption: @font-size-em-smaller;
 @font-size--post-tag-list:       @font-size-em-small;
+@font-size--nav:                 @font-size-em-base;
 // : font-family-variables
-@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif: "Franklin Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:      Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:  Consolas, Monaco, "Andale Mono", monospace;
 // : font-family-applications
@@ -83,17 +90,19 @@
 @font-family--code:                @font-family-monospace;
 // : font-weight-variables
 @font-weight-bold:      700;
-@font-weight-semibold:  600;
 @font-weight-normal:    400;
 @font-weight-semilight: 300;
 // : font-weight-applications
-@font-weight--headings:    @font-weight-semibold;
-@font-weight--nav:         @font-weight-semibold;
-@font-weight--pre-subdued: @font-weight-normal;
-@font-weight--pre-normal:  @font-weight-normal;
-@font-weight--pre-alt:     @font-weight-normal;
-@font-weight--pre-em:      @font-weight-normal;
-@font-weight--pre-strong:  @font-weight-bold;
+@font-weight--headings:            @font-weight-bold;
+@font-weight--nav:                 @font-weight-bold;
+@font-weight--post-figure-caption: @font-weight-bold;
+@font-weight--post-date:           @font-weight-semilight;
+@font-weight--post-tag-list:       @font-weight-semilight;
+@font-weight--pre-subdued:         @font-weight-normal;
+@font-weight--pre-normal:          @font-weight-normal;
+@font-weight--pre-alt:             @font-weight-normal;
+@font-weight--pre-em:              @font-weight-normal;
+@font-weight--pre-strong:          @font-weight-bold;
 // : font-style applications
 @font-style--pre-em: italic;
 // : line-height-variables
@@ -145,12 +154,13 @@
 @width-screen--caption-padding-max: (@max-width--container--wide + 2 * @container-gutter);
 
 // spacing
-@margin-top--post:                      3em;
-@margin-bottom--post:                   6em;
-@padding--post-header-link-top:         1em;
-@padding--post-header-link-bottom:      1em;
-@margin-top--post--preview:             2em;
-@margin-bottom--post--preview:          5em;
+@margin-bottom--page-main:              8.4em;
+@margin-top--post:                      4.2em;
+@margin-bottom--post:                   8.4em;
+@padding--post-header-link-top:         0.7em;
+@padding--post-header-link-bottom:      0.7em;
+@margin-top--post--preview:             (@margin-top--post - @padding--post-header-link-top);
+@margin-bottom--post--preview:          (@margin-bottom--post - @padding--post-header-link-bottom);
 @margin-top--post-figure:               1.4em;
 @margin-bottom--post-figure:            1.4em;
 @margin-bottom--post-figure-group:      2.8em;
@@ -166,15 +176,18 @@
 @padding-top--code:                     0.1667em;
 @padding-left--pre:                     1em;
 @padding-top--pre:                      1em;
+@padding-left--nav:                     @container-gutter;
+@padding-top--nav:                      (@container-gutter*3/4);
 
 // miscellaneous
-@box-shadow--a:          inset 0 -1px @color-gray-light;
+@box-shadow--a:          inset 0 -1px @color--box-shadow--a;
 @width--hr:              5em;
 @margin-top--hr:         2.8em;
 @margin-bottom--hr:      2.8em;
-@border-top--hr:         1px solid @color-gray-lighter;
-@box-shadow--blockquote: inset 3px 0 @color-gray-light;
+@border-top--hr:         1px solid @color--border-top--hr;
+@box-shadow--blockquote: inset 3px 0 @color--box-shadow--blockquote;
 
 // content
-@content--post-tag-list-before:     '';
-@content--post-tag-list-item-after: ',';
+@content--post-tag-list-before:      'Tagged: ';
+@content--post-tag-list-item-before: '';
+@content--post-tag-list-item-after:  ',';
