@@ -1,3 +1,4 @@
+// left and right auto margins
 .margin-center() {
   margin-left: auto;
   margin-right: auto;
@@ -10,8 +11,6 @@
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
 
-// unused so far ------------------
-
 // For modern browsers
 // 1. The space content is one way to avoid an Opera bug when the
 //    contenteditable attribute is included anywhere else in the document.
@@ -21,7 +20,6 @@
 //    `:before` to contain the top-margins of child elements.
 //
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
-
 .clearfix() {
   *zoom: 1;
   &:before,
@@ -34,9 +32,7 @@
   }
 }
 
-
-
-
+// opacity
 .opacity(@opacity) {
   opacity: @opacity;
   // IE8 filter
@@ -44,38 +40,12 @@
   filter: ~"alpha(opacity=@{opacity-ie})";
 }
 
-
-.placeholder(@color: @color-grayLight) {
-  ::-webkit-input-placeholder {
-    color: @color;
-  }
-  input:-moz-placeholder {
-    color: @color;
-  }
-  input::-moz-placeholder {
-    color: @color;
-  }
-  :-ms-input-placeholder {  
-    color: @color;
-  }
-}
-
-
 // requires inline-block or block for proper styling
 .text-overflow() {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.line-clamp(@n: 1) {
-  overflow : hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: @n;
-  -webkit-box-orient: vertical;
-  height: (@n * @fontSize-base * @lineHeight-base);
-}
-
 
 // drop shadows
 .box-shadow(@shadow) {
