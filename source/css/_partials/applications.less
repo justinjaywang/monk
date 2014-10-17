@@ -193,6 +193,9 @@ blockquote {
   margin-top: @margin-top--post-figure;
   margin-bottom: @margin-bottom--post-figure;
 }
+.post-content > *:not(.post-figure) + .post-figure {
+  margin-top: @margin-top--post-figure-group;
+}
 .post-content > .post-figure + .post-figure {
   margin-top: 0;
 }
