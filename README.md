@@ -1,24 +1,32 @@
 **Monk** is a theme for [Hexo](http://hexo.io/). It is one of practiced restraint, minimalism, and focus.
 
-## Use
+## Install
 
-### Install
-
-Install the Hexo Less renderer to compile the Less files.
+### Install the required Hexo plugins.
 
 ``` bash
 npm install hexo-renderer-less --save
 ```
 
-Clone the repository to the `themes/` directory of your Hexo project.
+### (1) Clone this theme repository or (2) Add as a submodule within another project.
+
+Clone to the `themes/` directory of your Hexo project. 
 
 ``` bash
-$ git clone https://github.com/justinjaywang/monk.git themes/monk
+$ git clone git://github.com/justinjaywang/monk.git themes/monk
 ```
 
-Configure `theme:` to `monk` in your Hexo project's `_config.yml`.
+Add as a submodule to `themes/` of your Git Hexo project.
 
-### Update
+``` bash
+git submodule add git://github.com/justinjaywang/monk.git themes/monk
+```
+
+### Edit Hexo configuration file
+
+Change `theme:` to `monk` in your Hexo project's `_config.yml`.
+
+## Update
 
 Pull the latest.
 
