@@ -231,16 +231,16 @@ blockquote {
 }
 .post-tag-list-item {
   display: inline-block;
-  margin-left: @margin-left--post-tag-list-item;
-}
-.post-tag-list-item:first-child {
-  margin-left: @margin-left--post-tag-list-item-first;
+  margin-right: @margin-right--post-tag-list-item;
 }
 .post-tag-list-item:before {
   content: @content--post-tag-list-item-before;
 }
 .post-tag-list-item:after {
   content: @content--post-tag-list-item-after;
+}
+.post-tag-list-item:last-child {
+  margin-right: @margin-right--post-tag-list-item-last;
 }
 .post-tag-list-item:last-child:after {
   content: none;
