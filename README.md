@@ -2,4 +2,4 @@
 
 Simple, unadorned [Hexo](http://hexo.io/) theme.
 
-[Preview](http://justinjaywang.github.io/monk).
+View the [demo](http://justinjaywang.github.io/monk) for more info and how to install.
