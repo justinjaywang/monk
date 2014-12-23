@@ -185,6 +185,7 @@ blockquote {
   list-style-type: none;
   counter-reset: decimal-counter;
 }
+.post-content > ol li:before,
 .post-content > ul li:before {
   content: counter(decimal-counter);
   counter-increment: decimal-counter;
