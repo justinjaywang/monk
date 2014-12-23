@@ -182,6 +182,20 @@ blockquote {
 .post-content > ol,
 .post-content > ul {
   padding-left: @padding-left--list;
+  list-style-type: none;
+  counter-reset: decimal-counter;
+}
+.post-content > ul li:before {
+  content: counter(decimal-counter);
+  counter-increment: decimal-counter;
+  position: relative;
+  text-align: right;
+  display: inline-block;
+  width: @width--post-content-list-item;
+  left: @left--post-content-list-item;
+  margin-right: @margin-right--post-content-list-item;
+  padding-right: @padding-right--post-content-list-item;
+  color: @color--post-content-list-item;
 }
 .post-date {
   color: @color--post-date;

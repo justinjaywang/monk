@@ -32,9 +32,10 @@
 @color--pre-alt:                @color-gray-dark;
 @color--pre-em:                 @color-gray-darkest;
 @color--pre-strong:             @color-gray-darkest;
-@color--box-shadow--a:          @color-gray-light;
+@color--box-shadow--a:          @color-gray-lighter;
 @color--border-top--hr:         @color-gray-lighter;
 @color--box-shadow--blockquote: @color-gray-light;
+@color--post-content-list-item: @color-gray-light;
 
 // typography
 // : font-size-variables
@@ -180,6 +181,10 @@
 @padding-top--pre:                      1em;
 @padding-left--nav:                     @container-gutter;
 @padding-top--nav:                      (@container-gutter*3/4);
+@width--post-content-list-item:         2.5em;
+@left--post-content-list-item:          -@width--post-content-list-item;
+@margin-right--post-content-list-item:  -@width--post-content-list-item;
+@padding-right--post-content-list-item: 0.5em;
 
 // miscellaneous
 @box-shadow--a:          inset 0 -1px @color--box-shadow--a;
@@ -188,6 +193,7 @@
 @margin-bottom--hr:      2.8em;
 @border-top--hr:         1px solid @color--border-top--hr;
 @box-shadow--blockquote: inset 3px 0 @color--box-shadow--blockquote;
+
 
 // content
 @content--post-tag-list-before:      'Tagged: ';
