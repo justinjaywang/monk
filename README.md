@@ -1,4 +1,4 @@
-**Monk** is a simple, unadorned [Hexo](http://hexo.io/) theme.
+**Monk** is a simple, unadorned [Hexo](http://hexo.io/) theme. It is deliberately designed for a focused reading experience.
 
 ### Installation
 
