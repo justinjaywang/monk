@@ -23,9 +23,13 @@ body {
   .font-smoothing(antialiased);
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  display: flex; // for sticky footer
+  min-height: 100vh;
+  flex-direction: column;
 }
 .page-main {
   margin-bottom: @margin-bottom--page-main;
+  flex: 1;
 }
 .container {
   width: 100%;
