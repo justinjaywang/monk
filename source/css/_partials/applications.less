@@ -105,12 +105,19 @@ hr {
 .post-content a {
   box-shadow: @box-shadow--a;
 }
+strong {
+  font-family: @font-family--strong;
+}
+em {
+  font-style: @font-style--em;
+}
 blockquote {
   box-shadow: @box-shadow--blockquote;
   font-size: @font-size--blockquote;
+  font-style: @font-style--em;
 }
-strong {
-  font-family: @font-family--strong;
+blockquote em {
+  font-style: @font-style--normal;
 }
 
 // nav
@@ -229,6 +236,7 @@ strong {
   margin-bottom: @margin-bottom--post-figure-group;
 }
 .post-figure img {
+  width: 100%;
   .img-responsive();
 }
 .post-figure-caption {
