@@ -19,8 +19,3 @@ _site
 .DS_Store
 ._*
 Thumbs.db
-
-# project-specific
-node_modules
-package.json
-gulpfile.js
